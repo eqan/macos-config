@@ -1,0 +1,4 @@
+alt - v : open -na /Applications/cursor.app
+alt - b : open -na /Applications/Zen\ Browser.app
+alt - c : aerospace close
+alt - t : open -na Terminal
