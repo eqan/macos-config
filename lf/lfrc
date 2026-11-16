@@ -1,0 +1,39 @@
+# macOS lf configuration: fast, ranger-like, and Neovim-friendly.
+set shell sh
+set shellflag "-c"
+set hidden false
+set icons true
+set drawbox true
+set reverse true
+set ignorecase true
+set smartcase true
+set incsearch true
+set scrolloff 5
+set tabstop 4
+set ratios 1:2:3
+set info size:time
+set preview true
+set previewer "~/.config/lf/preview.sh"
+
+cmd open &~/.config/lf/open.sh "$f"
+
+map e $$nvim "$f"
+map i !bat --paging=always "$f"
+map l open
+map <right> open
+map zh set hidden!
+map _ set hidden!
+map \_ set hidden!
+map zf set reverse!
+map zr reload
+map yy copy
+map dd cut
+map pp paste
+map D delete
+map r rename
+
+map gh cd ~
+map gd cd ~/Desktop
+map gc cd ~/.config
+map gv cd ~/Movies
+map gp cd ~/Pictures

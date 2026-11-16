@@ -3,7 +3,7 @@
 HISTSIZE=1000000
 SAVEHIST=1000000
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="Terminal"
 # export BROWSER="firefox"
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.docker/bin":$PATH
@@ -20,8 +20,12 @@ export XDG_CURRENT_DESKTOP="Wayland"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 #export PATH="$PATH:./node_modules/.bin"
-eval "$(fnm env)"
-eval "$(zoxide init zsh)"
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env)"
+fi
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
 # eval "`pip completion --zsh`"
 
 case "$(uname -s)" in

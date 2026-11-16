@@ -43,7 +43,14 @@ case "$(uname -s)" in
 
 Darwin)
 	# echo 'Mac OS X'
-	alias ls='ls -G'
+	if command -v eza >/dev/null 2>&1; then
+		alias ls='eza --icons --group-directories-first'
+		alias ll='eza --long --header --icons --group-directories-first'
+		alias la='eza --long --all --header --icons --group-directories-first'
+		alias tree='eza --tree --icons'
+	else
+		alias ls='ls -G'
+	fi
 	;;
 
 Linux)

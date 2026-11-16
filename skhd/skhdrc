@@ -1,4 +1,6 @@
-alt - v : open -na /Applications/cursor.app
+alt - v : open -na /Applications/Visual\ Studio\ Code.app
 alt - b : open -na /Applications/Zen\ Browser.app
 alt - c : aerospace close --quit-if-last-window
+alt - m : aerospace close
 alt - t : open -na Terminal
+alt - q : aerospace enable toggle
